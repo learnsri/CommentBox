@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment Box</title>
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comment Box</title>
+  <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
+
+  <div class="page-container">
     <div class="h1">
-    <h1>Comment Box</h1>
+      <h1>Comment Box</h1>
     </div>
 
-    <div class="input-form">
+    <form id="commentForm" action="https://formspree.io/f/mwprlbyn" method="POST" class="form-wrapper">
+      <div class="input-form">
+        <input type="text" placeholder="Enter your username" name="username" required />
+        <input type="email" placeholder="Enter your email" name="email" required />
+      </div>
 
-        <form id="commentForm" action="https://formspree.io/f/mwprlbyn" method="POST">
-        <input type="text" placeholder="Enter your username" name="username">
-        <input type="email" placeholder="Enter your email" name="email">
-    </div>
+         <div class="comment-area">
+             <textarea class="form-control" placeholder="Write your comment here..." name="comment" rows="5" required></textarea>
+        </div>
 
-    <div class="comment-area">
-                              
-        <input type="text" class="form-control" placeholder="Write your comment here..." name="comment" required>
-                          
-    </div>
 
-    <div class="container">
-    <button class="button-28" role="button">Submit</button>
-    </div>
 
+      <div class="submit-container">
+        <button class="button-28" role="button">Submit</button>
+      </div>
     </form>
+  </div>
 
-
-    <script src="comment.js"></script>
-
+  <script src="comment.js"></script>
 </body>
 </html>
